@@ -1,0 +1,7 @@
+{{/*继承跟模板，然后重新定义快模板就好了*/}}
+{{/*template "base.tmpl"前面渲染使用Execute是不需要加点. */}}
+{{template "base.tmpl" . }}
+{{define "content"}}{{/*重新定义block模板,下面的内容会被替换到block模板部分*/}}
+    <h1>这是index_baseh1页面</h1>
+    <p>{{ . }}</p>
+{{end}}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>嵌套模板测试</title>
+</head>
+<body>
+<h1>测试嵌套template语法</h1>
+<hr>
+{{/*嵌套了另外一个模板文件*/}}
+{{template "u1.tmpl"}}
+<hr>
+{{template "o1.tmpl"}}
+<div>你好，{{.}}</div>
+</body>
+</html>
+{{/*通过define定义一个模板，上面调用*/}}
+{{ define "o1.tmpl"}}
+<ol>
+    <li>吃肉</li>
+</ol>>
+{{end}}
